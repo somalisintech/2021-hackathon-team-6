@@ -1,10 +1,10 @@
-const App = () => {
-	return <div className='main'>
 
+import Signup from './components/Signup';
 
-		<h1> Test <h1/>
-	</div>;
-
-};
-
-export default App;
+export default function App() {
+	return (
+		<div>
+			<Signup />
+		</div>
+	);
+}
