@@ -10,9 +10,6 @@ export default function App() {
 		<>
 			<Router>
 				<Switch>
-					{/* /*Uncomment to see Carbon page*/}
-					{/* // <Carbon /> */}
-					{/* //Comment out to see Carbon page */}
 					<Route exact path="/">
 						<Box
 							sx={{
