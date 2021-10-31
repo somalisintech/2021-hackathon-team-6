@@ -9,7 +9,7 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import PaymentForm from './PaymentForm';
 import { Grid } from '@mui/material';
-import car from './../assets/undraw_electric_car_b-7-hl.svg';
+import explore from './../assets/undraw_explore_re_8l4v.svg';
 
 function Payment() {
 	return (
@@ -25,7 +25,7 @@ function Payment() {
 								paddingTop: 5
 							}}
 							alt="car"
-							src={car}
+							src={explore}
 						/>
 						{/* <img src={car} alt="car" sx={{ maxWidth: '100%' }} /> */}
 					</Box>
