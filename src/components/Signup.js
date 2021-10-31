@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
-
+import { useHistory } from 'react-router';
 import { signup, login, logout, useAuth } from '../firebase';
-
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -18,10 +17,13 @@ function Signup() {
 	const emailRef = useRef();
 	const passwordRef = useRef();
 
+	const history = useHistory();
+
 	async function handleSignup() {
 		setLoading(true);
 		// try {
 		await signup(emailRef.current.value, passwordRef.current.value);
+		history.push('/carbon')
 		// } catch {
 		// alert("Error!");
 		// }
@@ -32,6 +34,7 @@ function Signup() {
 		setLoading(true);
 		try {
 			await login(emailRef.current.value, passwordRef.current.value);
+			history.push('/carbon')
 		} catch {
 			alert('Error!');
 		}
@@ -42,6 +45,7 @@ function Signup() {
 		setLoading(true);
 		try {
 			await logout();
+			history.push('/homepage')
 		} catch {
 			alert('Error!');
 		}
