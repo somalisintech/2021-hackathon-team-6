@@ -21,7 +21,7 @@ function Signup() {
 
 	async function handleSignup() {
 		setLoading(true);
-		signup(emailRef.current.value, passwordRef.current.value);
+		await signup(emailRef.current.value, passwordRef.current.value);
 		try{
 		history.push('/carbon')
 	} catch(err){
@@ -32,15 +32,15 @@ function Signup() {
 
 	async function handleLogin() {
 		setLoading(true);
-		login(emailRef.current.value, passwordRef.current.value);
+		await login(emailRef.current.value, passwordRef.current.value);
 		history.push('/carbon')
 		setLoading(false);
 	}
 
 	async function handleLogout() {
 		setLoading(true);
-		logout();
-		this.props.history.push('/homepage')
+		await logout();
+		history.push('/homepage')
 		setLoading(false);
 	}
 
