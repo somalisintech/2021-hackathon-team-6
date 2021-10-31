@@ -75,10 +75,12 @@ export default function Carbon() {
 									title="Xalima Thunberg"
 									subheader="Someone who cares for the planet"
 								/>
-								<Typography variant="body2" component="div">
-									You recycle, ride a bike, eat less meat, eco friendly, avoids
-									plastic
-								</Typography>
+								<ul>
+									<li>You recycle</li>
+									<li>Ride a bike</li>
+									<li>Eat less meat</li>
+									<li>Avoids plastic</li>
+								</ul>
 							</Card>
 						</Link>
 					</Grid>
@@ -117,10 +119,12 @@ export default function Carbon() {
 									title="Abdi Attenborough"
 									subheader="You care but you still fly to places"
 								/>
-								<Typography variant="body2" component="div">
-									You sometimes recycle, take public transport, eat meat some of
-									the time, eco friendly
-								</Typography>
+								<ul>
+									<li>You sometimes recycle</li>
+									<li>Take public transport</li>
+									<li>Eat meat some of the time</li>
+									<li>Eco friendly</li>
+								</ul>
 							</Card>
 						</Link>
 					</Grid>
@@ -159,10 +163,12 @@ export default function Carbon() {
 									title="Warsame Waste"
 									subheader="Own or belong to a company"
 								/>
-								<Typography variant="body2" component="div">
-									Never recycle, drive everyday, eat nothing but hilib, fly
-									often
-								</Typography>
+								<ul>
+									<li> Never recycle</li>
+									<li> Drive everyday</li>
+									<li>Eat nothing but hilib</li>
+									<li>Fly often</li>
+								</ul>
 							</Card>
 						</Link>
 					</Grid>
