@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 
-import hero from './../assets/hero.png';
+import hero from './../assets/garden.png';
 import Box from '@mui/material/Box';
 import whitesquiggle from './../assets/whitesquiggle.svg';
 function Homepage() {
@@ -9,8 +9,9 @@ function Homepage() {
 		<Box
 			component="img"
 			sx={{
-				maxWidth: 650,
-				paddingTop: 5
+				paddingTop: 30,
+				maxWidth: 500
+
 			}}
 			alt="Geed"
 			src={hero}
