@@ -1,6 +1,5 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-
 import geed from './../assets/Geed.svg';
 function Logo() {
 	return (
@@ -8,7 +7,10 @@ function Logo() {
 			component="img"
 			mt={3}
 			sx={{
-				maxWidth: '20%'
+
+				maxWidth: '70px'
+{/*maxWidth: '20%'*/} 				
+
 			}}
 			alt="logo"
 			src={geed}
