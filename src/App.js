@@ -36,12 +36,11 @@ export default function App() {
 						<Carbon />
 					</Route>
 
-					<Route path='/dashboard'>
+					<Route path="/dashboard">
 						<Dashboard />
-
+					</Route>
 					<Route path="/results">
 						<Results />
-
 					</Route>
 				</Switch>
 			</Router>
