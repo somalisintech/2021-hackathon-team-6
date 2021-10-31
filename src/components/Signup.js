@@ -125,9 +125,9 @@ function Signup() {
 						</Button>
 					</Link>
 					<Link to="/">
-					<Button disabled={loading || !currentUser} onClick={handleLogout}>
-						Log Out
-					</Button>
+						<Button disabled={loading || !currentUser} onClick={handleLogout}>
+							Log Out
+						</Button>
 					</Link>
 				</Box>
 			</Box>
