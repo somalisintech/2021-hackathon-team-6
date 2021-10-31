@@ -348,8 +348,10 @@ const PaymentForm = () => {
 				required
 				placeholder="ZIP"
 			/>
-			<Link to="/dashboard">
-				<Button variant="contained">Pay</Button>
+			<Link to="/dashboard" style={{ textDecoration: 'none' }}>
+				<Button variant="contained" fullWidth>
+					Pay
+				</Button>
 			</Link>
 		</Box>
 
