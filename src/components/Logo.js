@@ -7,10 +7,8 @@ function Logo() {
 			component="img"
 			mt={3}
 			sx={{
-
 				maxWidth: '70px'
-{/*maxWidth: '20%'*/} 				
-
+				/*maxWidth: '20%'*/
 			}}
 			alt="logo"
 			src={geed}

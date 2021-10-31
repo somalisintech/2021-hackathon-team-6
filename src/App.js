@@ -1,4 +1,3 @@
-
 import Carbon from './components/Carbon';
 import Homepage from './components/Homepage';
 import Signup from './components/Signup';
@@ -6,6 +5,7 @@ import Box from '@mui/material/Box';
 
 export default function App() {
 	return (
+		// <Carbon />
 		<Box
 			sx={{
 				display: 'flex',
@@ -19,6 +19,5 @@ export default function App() {
 				<Homepage />
 			</div>
 		</Box>
-
 	);
 }
