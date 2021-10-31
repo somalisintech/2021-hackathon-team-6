@@ -28,11 +28,39 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 export function signup(email, password) {
-	createUserWithEmailAndPassword(auth, email, password);
+	return createUserWithEmailAndPassword(auth, email, password)
+  .then(() => {
+    console.log('User account created & signed in!');
+  })
+  .catch(error => {
+    if (error.code === 'auth/email-already-in-use') {
+      alert('That email address is already in use! Please login instead.');
+    }
+    if (error.code === 'auth/invalid-email') {
+      alert('That email address is invalid!');
+    }
+		if (error.code === 'auth/weak-password') {
+      alert('That password is weak! Please enter a stronger password.');
+    }
+		console.error(error);
+  });
 }
 export function login(email, password) {
-	return signInWithEmailAndPassword(auth, email, password);
+	return signInWithEmailAndPassword(auth, email, password)
+	.then(() => {
+    console.log('User account signed in!');
+  })
+  .catch(error => {
+		if (error.code === 'auth/wrong-password') {
+			alert('Wrong password!');
+		}
+		if (error.code === 'auth/user-not-found') {
+			alert('This user does not exist! Please signup.');
+		}
+		console.error(error);
+  });
 }
+
 export function logout() {
 	return signOut(auth);
 }
