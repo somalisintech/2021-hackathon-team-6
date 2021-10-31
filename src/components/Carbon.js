@@ -11,6 +11,7 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
+import { Link } from 'react-router-dom';
 
 import { red } from '@mui/material/colors';
 import explore from './../assets/undraw_explore_re_8l4v.svg';
@@ -37,82 +38,96 @@ export default function Carbon() {
 			<Box>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-						<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
-							<CardMedia
-								component="img"
-								height="194"
-								image={explore}
-								alt="Paella dish"
-								sx={{ objectFit: 'contain' }}
-							/>
-
-							<CardHeader
-								avatar={
-									<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-										X
-									</Avatar>
-								}
-								title="Xalima Thunberg"
-								subheader="Someone who cares for the planet"
-								sx={{
-									border: '1px solid #1565D8',
-									marginTop: '50px',
-									borderRadius: '4px'
-								}}
-							/>
-						</Card>
+					<Link to={{pathname: "/results", state: 'Xalima Thunberg' }} style={{ textDecoration: 'none' }}>
+							<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
+								<CardMedia
+									component="img"
+									height="194"
+									image={explore}
+									alt="Paella dish"
+									sx={{ objectFit: 'contain' }}
+								/>
+								<CardHeader
+									avatar={
+										<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+											X
+										</Avatar>
+									}
+									title="Xalima Thunberg"
+									subheader="Someone who cares for the planet"
+									sx={{
+										border: '1px solid #1565D8',
+										marginTop: '50px',
+										borderRadius: '4px',
+										'&:hover': {
+											backgroundColor: '#F5F9FF'
+										}
+									}}
+								/>
+							</Card>
+						</Link>
 					</Grid>
 					<Grid item xs={4}>
-						<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
-							<CardMedia
-								component="img"
-								height="194"
-								image={environment}
-								alt="Paella dish"
-								sx={{ objectFit: 'contain' }}
-							/>
+					<Link to={{pathname: "/results", state: 'Abdi Attenborough' }} style={{ textDecoration: 'none' }}>
+							<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
+								<CardMedia
+									component="img"
+									height="194"
+									image={environment}
+									alt="Paella dish"
+									sx={{ objectFit: 'contain' }}
+								/>
 
-							<CardHeader
-								avatar={
-									<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-										A
-									</Avatar>
-								}
-								title="Abdi Attenborough"
-								subheader="You care but you still fly to places"
-								sx={{
-									border: '1px solid #1565D8',
-									marginTop: '50px',
-									borderRadius: '4px'
-								}}
-							/>
-						</Card>
+								<CardHeader
+									avatar={
+										<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+											A
+										</Avatar>
+									}
+									title="Abdi Attenborough"
+									subheader="You care but you still fly to places"
+									sx={{
+										border: '1px solid #1565D8',
+										marginTop: '50px',
+										borderRadius: '4px',
+										'&:hover': {
+											backgroundColor: '#F5F9FF'
+										}
+									}}
+								/>
+							</Card>
+						</Link>
 					</Grid>
 					<Grid item xs={4}>
-						<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
-							<CardMedia
-								component="img"
-								height="194"
-								image={car}
-								alt="Paella dish"
-								sx={{ objectFit: 'contain' }}
-							/>
+					<Link to={{pathname: "/results", state: 'Worst' }} style={{ textDecoration: 'none' }}>
+							<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
+								<CardMedia
+									component="img"
+									height="194"
+									image={car}
+									alt="Paella dish"
+									sx={{ objectFit: 'contain' }}
+								/>
 
-							<CardHeader
-								avatar={
-									<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-										W
-									</Avatar>
-								}
-								title="Worst"
-								subheader="Own or belong to a company"
-								sx={{
-									border: '1px solid #1565D8',
-									marginTop: '50px',
-									borderRadius: '4px'
-								}}
-							/>
-						</Card>
+								<CardHeader
+									avatar={
+										<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+											W
+										</Avatar>
+									}
+									title="Worst"
+									subheader="Own or belong to a company"
+									sx={{
+										border: '1px solid #1565D8',
+										marginTop: '50px',
+										borderRadius: '4px',
+										'&:hover': {
+											backgroundColor: '#F5F9FF'
+										}
+									}}
+								/>
+							</Card>
+						</Link>
 					</Grid>
 				</Grid>
 			</Box>
