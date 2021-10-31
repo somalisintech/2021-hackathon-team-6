@@ -1,10 +1,9 @@
-
-import Signup from './components/Signup';
+import Carbon from './components/Carbon';
 
 export default function App() {
 	return (
 		<div>
-			<Signup />
+			<Carbon />
 		</div>
 	);
 }
