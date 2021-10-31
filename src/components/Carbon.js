@@ -13,9 +13,8 @@ import Avatar from '@mui/material/Avatar';
 
 // import IconButton from '@mui/material/IconButton';
 
-import IconButton from '@mui/material/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
-
 
 import { red } from '@mui/material/colors';
 import explore from './../assets/undraw_explore_re_8l4v.svg';
@@ -27,6 +26,7 @@ import car from './../assets/undraw_electric_car_b-7-hl.svg';
 // import TextField from '@mui/material/TextField';
 
 import Box from '@mui/material/Box';
+
 export default function Carbon() {
 	return (
 		<Container component="main" maxWidth="lg">
@@ -42,8 +42,23 @@ export default function Carbon() {
 			<Box>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-					<Link to={{pathname: "/results", state: 'Xalima Thunberg' }} style={{ textDecoration: 'none' }}>
-							<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
+						<Link
+							to={{ pathname: '/results', state: 'Xalima Thunberg' }}
+							style={{ textDecoration: 'none' }}
+						>
+							<Card
+								sx={{
+									maxWidth: 345,
+									padding: '10px',
+									boxShadow: '0',
+									border: '1px solid #1565D8',
+									marginTop: '50px',
+									borderRadius: '4px',
+									'&:hover': {
+										backgroundColor: '#F5F9FF'
+									}
+								}}
+							>
 								<CardMedia
 									component="img"
 									height="194"
@@ -59,21 +74,32 @@ export default function Carbon() {
 									}
 									title="Xalima Thunberg"
 									subheader="Someone who cares for the planet"
-									sx={{
-										border: '1px solid #1565D8',
-										marginTop: '50px',
-										borderRadius: '4px',
-										'&:hover': {
-											backgroundColor: '#F5F9FF'
-										}
-									}}
 								/>
+								<Typography variant="body2" component="div">
+									You recycle, ride a bike, eat less meat, eco friendly, avoids
+									plastic
+								</Typography>
 							</Card>
 						</Link>
 					</Grid>
 					<Grid item xs={4}>
-					<Link to={{pathname: "/results", state: 'Abdi Attenborough' }} style={{ textDecoration: 'none' }}>
-							<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
+						<Link
+							to={{ pathname: '/results', state: 'Abdi Attenborough' }}
+							style={{ textDecoration: 'none' }}
+						>
+							<Card
+								sx={{
+									maxWidth: 345,
+									padding: '10px',
+									boxShadow: '0',
+									border: '1px solid #1565D8',
+									marginTop: '50px',
+									borderRadius: '4px',
+									'&:hover': {
+										backgroundColor: '#F5F9FF'
+									}
+								}}
+							>
 								<CardMedia
 									component="img"
 									height="194"
@@ -90,21 +116,32 @@ export default function Carbon() {
 									}
 									title="Abdi Attenborough"
 									subheader="You care but you still fly to places"
-									sx={{
-										border: '1px solid #1565D8',
-										marginTop: '50px',
-										borderRadius: '4px',
-										'&:hover': {
-											backgroundColor: '#F5F9FF'
-										}
-									}}
 								/>
+								<Typography variant="body2" component="div">
+									You sometimes recycle, take public transport, eat meat some of
+									the time, eco friendly
+								</Typography>
 							</Card>
 						</Link>
 					</Grid>
 					<Grid item xs={4}>
-					<Link to={{pathname: "/results", state: 'Worst' }} style={{ textDecoration: 'none' }}>
-							<Card sx={{ maxWidth: 345, boxShadow: '0' }}>
+						<Link
+							to={{ pathname: '/results', state: 'Worst' }}
+							style={{ textDecoration: 'none' }}
+						>
+							<Card
+								sx={{
+									maxWidth: 345,
+									padding: '10px',
+									boxShadow: '0',
+									border: '1px solid #1565D8',
+									marginTop: '50px',
+									borderRadius: '4px',
+									'&:hover': {
+										backgroundColor: '#F5F9FF'
+									}
+								}}
+							>
 								<CardMedia
 									component="img"
 									height="194"
@@ -119,17 +156,13 @@ export default function Carbon() {
 											W
 										</Avatar>
 									}
-									title="Worst"
+									title="Warsame Waste"
 									subheader="Own or belong to a company"
-									sx={{
-										border: '1px solid #1565D8',
-										marginTop: '50px',
-										borderRadius: '4px',
-										'&:hover': {
-											backgroundColor: '#F5F9FF'
-										}
-									}}
 								/>
+								<Typography variant="body2" component="div">
+									Never recycle, drive everyday, eat nothing but hilib, fly
+									often
+								</Typography>
 							</Card>
 						</Link>
 					</Grid>
