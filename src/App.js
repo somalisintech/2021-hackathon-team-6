@@ -8,9 +8,6 @@ import Results from './components/Results';
 
 export default function App() {
 	return (
-
-
-
 		<>
 			<Router>
 				<Switch>
@@ -31,6 +28,9 @@ export default function App() {
 					</Route>
 					<Route path="/carbon">
 						<Carbon />
+					</Route>
+					<Route path="/results">
+						<Results />
 					</Route>
 				</Switch>
 			</Router>
