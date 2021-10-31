@@ -4,6 +4,7 @@ import Payment from './components/Payment';
 import Homepage from './components/Homepage';
 import Signup from './components/Signup';
 import Box from '@mui/material/Box';
+import Dashboard from './components/Dash/Dashboard';
 
 import Results from './components/Results';
 
@@ -34,8 +35,13 @@ export default function App() {
 					<Route path="/carbon">
 						<Carbon />
 					</Route>
+
+					<Route path='/dashboard'>
+						<Dashboard />
+
 					<Route path="/results">
 						<Results />
+
 					</Route>
 				</Switch>
 			</Router>
