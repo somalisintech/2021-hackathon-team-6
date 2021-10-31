@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 // import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-
+import geed from './../assets/Geed.svg';
 function Signup() {
 	const [loading, setLoading] = useState(false);
 	const currentUser = useAuth();
@@ -50,6 +50,15 @@ function Signup() {
 
 	return (
 		<Container component="main" maxWidth="xs">
+			<Box
+				component="img"
+				mt={3}
+				sx={{
+					maxWidth: '20%'
+				}}
+				alt="logo"
+				src={geed}
+			></Box>
 			<CssBaseline />
 			<Box
 				sx={{
