@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import { signup, login, logout, useAuth } from '../firebase';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -21,34 +21,26 @@ function Signup() {
 
 	async function handleSignup() {
 		setLoading(true);
-		// try {
-		await signup(emailRef.current.value, passwordRef.current.value);
+		signup(emailRef.current.value, passwordRef.current.value);
+		try{
 		history.push('/carbon')
-		// } catch {
-		// alert("Error!");
-		// }
+	} catch(err){
+		console.error(err);
+	}
 		setLoading(false);
 	}
 
 	async function handleLogin() {
 		setLoading(true);
-		try {
-			await login(emailRef.current.value, passwordRef.current.value);
-			history.push('/carbon')
-		} catch {
-			alert('Error!');
-		}
+		login(emailRef.current.value, passwordRef.current.value);
+		history.push('/carbon')
 		setLoading(false);
 	}
 
 	async function handleLogout() {
 		setLoading(true);
-		try {
-			await logout();
-			history.push('/homepage')
-		} catch {
-			alert('Error!');
-		}
+		logout();
+		this.props.history.push('/homepage')
 		setLoading(false);
 	}
 
