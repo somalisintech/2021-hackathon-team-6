@@ -5,7 +5,7 @@ import { signup, login, logout, useAuth } from '../firebase';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-
+import Logo from './Logo';
 import Box from '@mui/material/Box';
 // import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
@@ -51,19 +51,47 @@ function Signup() {
 	return (
 		<Container component="main" maxWidth="xs">
 			<CssBaseline />
+			<Logo />
 			<Box
 				sx={{
 					marginTop: 8,
 					display: 'flex',
 					flexDirection: 'column',
-					alignItems: 'center'
+					alignItems: 'center',
+					width: '100%'
 				}}
 			>
-				<Typography component="h1" variant="h5">
-					Sign in/Sign up
-				</Typography>
-				<Typography>Currently logged in as: {currentUser?.email}</Typography>
 				<Box>
+					<Typography component="h1" variant="h4">
+						Register Individual Account!
+					</Typography>
+					<Typography variant="h6">
+						For the purpose of industry regulation, your details are required.
+						{/* Currently logged in as: {currentUser?.email} */}
+					</Typography>
+				</Box>
+
+				<Box>
+					<TextField
+						margin="normal"
+						required
+						fullWidth
+						id="name"
+						label="Name"
+						name="name"
+						autoComplete="name"
+						autoFocus
+					/>
+					<TextField
+						margin="normal"
+						required
+						fullWidth
+						id="lastname"
+						label="Last Name"
+						name="lastname"
+						autoComplete="lastname"
+						autoFocus
+					/>
 					<TextField
 						inputRef={emailRef}
 						margin="normal"
