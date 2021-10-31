@@ -56,13 +56,20 @@ function Signup() {
 					marginTop: 8,
 					display: 'flex',
 					flexDirection: 'column',
-					alignItems: 'center'
+					alignItems: 'center',
+					width: '100%'
 				}}
 			>
-				<Typography component="h1" variant="h5">
-					Sign in/Sign up
-				</Typography>
-				<Typography>Currently logged in as: {currentUser?.email}</Typography>
+				<Box>
+					<Typography component="h1" variant="h4">
+						Register Individual Account!
+					</Typography>
+					<Typography variant="h6">
+						For the purpose of industry regulation, your details are required.
+						{/* Currently logged in as: {currentUser?.email} */}
+					</Typography>
+				</Box>
+
 				<Box>
 					<TextField
 						inputRef={emailRef}

@@ -7,12 +7,13 @@ export default function App() {
 		<Box
 			sx={{
 				display: 'flex',
-				justifyContent: 'center'
+				justifyContent: 'space-around'
 			}}
 		>
-			<div>
+			<Box sx={{ alignSelf: 'left' }}>
 				<Signup />
-			</div>
+			</Box>
+
 			<div>
 				<Homepage />
 			</div>
