@@ -42,7 +42,9 @@ function Signup() {
 	async function handleLogout() {
 		setLoading(true);
 		await logout();
+
 		history.push('/');
+
 		setLoading(false);
 	}
 
