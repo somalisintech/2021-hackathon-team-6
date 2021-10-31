@@ -14,27 +14,37 @@ import car from './../assets/undraw_electric_car_b-7-hl.svg';
 import { Link } from 'react-router-dom';
 
 function Results() {
-
-
 	return (
 		<Container component="main" maxWidth="lg">
 			<Box>
 				<Logo />
 				<Box sx={{ display: 'flex', width: '100%', gap: '30px' }}>
-					<Card component="div" sx={{ 
-						marginTop: '250px', 
-						padding:'80px',  
-						height: '100%', 
-						borderRadius: '25px',
-						backgroundColor: '#415952' }}>
-							<CardHeader
+					<Box>
+						<Box>
+							<Card
+								component="div"
+								sx={{
+									padding: '80px',
+									height: '100%',
+									borderRadius: '25px',
+									backgroundColor: '#415952'
+								}}
+							>
+								<CardHeader
 									title="Xalima Thunberg"
 									subheader="Someone who cares for the planet"
 									sx={{
 										color: '#ffffff'
 									}}
 								/>
-					</Card>
+							</Card>
+						</Box>
+
+						<Button>
+							<Link to={{ pathname: '/payment' }}>Payment</Link>
+						</Button>
+					</Box>
+
 					<Box sx={{ flex: '1' }}>
 						<Box
 							component="img"
@@ -47,11 +57,6 @@ function Results() {
 						/>
 						{/* <img src={car} alt="car" sx={{ maxWidth: '100%' }} /> */}
 					</Box>
-					<Link to={{pathname: "/payment"}}>
-						<Button>
-							Payment
-							</Button>
-					</Link>
 				</Box>
 			</Box>
 		</Container>
