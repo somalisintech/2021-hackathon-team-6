@@ -1,10 +1,14 @@
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import Logo from '../Logo';
 import dashheader from '../../assets/dashheader.jpg';
 import profile from '../../assets/profile.png';
 import world from '../../assets/world.png';
+import chartleft from '../../assets/chartleft.svg';
+import chartright from '../../assets/chartright.svg';
 import Typography from '@mui/material/Typography';
+import environment from '../../assets/undraw_environment_iaus.svg';
 // import Chart from './Chart'
 
 const Dashboard = () => {
@@ -61,7 +65,7 @@ const Dashboard = () => {
 								borderRadius: '12px'
 							}}
 							alt="profile"
-							src={profile}
+							src={environment}
 						></Box>
 						<Typography component="h1" variant="h4">
 							Xalimo Thunberg
@@ -70,12 +74,87 @@ const Dashboard = () => {
 					<Box
 						sx={{
 							width: '100%',
+
 							display: 'flex',
 							justifyContent: 'space-evenly',
 							position: 'relative'
 						}}
 					>
-						{/* <Chart /> */}
+						<Box
+							display="flex"
+							sx={{
+								justifyContent: 'space-between',
+								width: '100%',
+								marginTop: '50px',
+								padding: '50px'
+							}}
+						>
+							{/* Charts */}
+							<Box sx={{ display: 'flex', gap: '30px' }}>
+								<Box
+									sx={{
+										display: 'flex',
+
+										flexDirection: 'column',
+										boxShadow: ' rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
+									}}
+								>
+									<Box p={3}>
+										<Typography component="h1" variant="h6">
+											Carbon Chart
+										</Typography>
+										<Typography>Here are your carbon stats</Typography>
+									</Box>
+									<Box
+										p={3}
+										component="img"
+										// sx={{
+										// 	width: '20%'
+										// }}
+										alt="person-holding-globe"
+										src={chartleft}
+									></Box>
+								</Box>
+								<Box
+									sx={{
+										display: 'flex',
+
+										flexDirection: 'column',
+										boxShadow: ' rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
+									}}
+								>
+									<Box p={3}>
+										<Typography component="h1" variant="h6">
+											Paid
+										</Typography>
+										<Typography>Here are your payment stats</Typography>
+									</Box>
+									<Box
+										p={3}
+										component="img"
+										// sx={{
+										// 	width: '20%'
+										// }}
+										alt="person-holding-globe"
+										src={chartright}
+									></Box>
+								</Box>
+							</Box>
+							{/* <Box
+								component="img"
+								sx={{
+									width: '30%',
+									// height: '450px',
+									borderRadius: '12px'
+									// position: 'absolute',
+									// right: '0',
+									// top: '186px'
+								}}
+								alt="person-holding-globe"
+								src={world}
+							></Box> */}
+						</Box>
+
 						<Box
 							component="img"
 							sx={{
