@@ -5,12 +5,12 @@ import { signup, login, logout, useAuth } from '../firebase';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-
+import Logo from './Logo';
 import Box from '@mui/material/Box';
 // import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import geed from './../assets/Geed.svg';
+
 function Signup() {
 	const [loading, setLoading] = useState(false);
 	const currentUser = useAuth();
@@ -50,16 +50,8 @@ function Signup() {
 
 	return (
 		<Container component="main" maxWidth="xs">
-			<Box
-				component="img"
-				mt={3}
-				sx={{
-					maxWidth: '20%'
-				}}
-				alt="logo"
-				src={geed}
-			></Box>
 			<CssBaseline />
+			<Logo />
 			<Box
 				sx={{
 					marginTop: 8,
@@ -80,6 +72,26 @@ function Signup() {
 				</Box>
 
 				<Box>
+					<TextField
+						margin="normal"
+						required
+						fullWidth
+						id="name"
+						label="Name"
+						name="name"
+						autoComplete="name"
+						autoFocus
+					/>
+					<TextField
+						margin="normal"
+						required
+						fullWidth
+						id="lastname"
+						label="Last Name"
+						name="lastname"
+						autoComplete="lastname"
+						autoFocus
+					/>
 					<TextField
 						inputRef={emailRef}
 						margin="normal"
