@@ -1,11 +1,11 @@
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Logo from '../Logo';
-import dashheader from './../assets/dashheader.jpg';
-import profile from './../assets/profile.png';
-import world from './../assets/world.png';
+import dashheader from '../../assets/dashheader.jpg';
+import profile from '../../assets/profile.png';
+import world from '../../assets/world.png';
 import Typography from '@mui/material/Typography';
-import Chart from './Chart'
+// import Chart from './Chart'
 
 const Dashboard = () => {
 	return (
@@ -63,7 +63,7 @@ const Dashboard = () => {
 							justifyContent: 'space-evenly'
 						}}
 					>
-						<Chart />
+						{/* <Chart /> */}
             <Box
 							component="img"
 							sx={{
