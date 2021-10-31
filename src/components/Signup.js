@@ -22,25 +22,25 @@ function Signup() {
 	async function handleSignup() {
 		setLoading(true);
 		await signup(emailRef.current.value, passwordRef.current.value);
-		try{
-		history.push('/carbon')
-	} catch(err){
-		console.error(err);
-	}
+		try {
+			history.push('/carbon');
+		} catch (err) {
+			console.error(err);
+		}
 		setLoading(false);
 	}
 
 	async function handleLogin() {
 		setLoading(true);
 		await login(emailRef.current.value, passwordRef.current.value);
-		history.push('/carbon')
+		history.push('/carbon');
 		setLoading(false);
 	}
 
 	async function handleLogout() {
 		setLoading(true);
 		await logout();
-		history.push('/homepage')
+		history.push('/homepage');
 		setLoading(false);
 	}
 
