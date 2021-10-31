@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import React from 'react';
 import { CardMedia, Grid } from '@mui/material';
-import car from './../assets/undraw_electric_car_b-7-hl.svg';
+import explore from './../assets/undraw_explore_re_8l4v.svg';
 import { Link } from 'react-router-dom';
 
 function Results() {
@@ -18,12 +18,25 @@ function Results() {
 		<Container component="main" maxWidth="lg">
 			<Box>
 				<Logo />
-				<Box sx={{ display: 'flex', width: '100%', gap: '30px' }}>
-					<Box>
-						<Box>
+				<Box sx={{ display: 'flex', width: '100%', gap: '40px' }}>
+					<Box
+						sx={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center'
+						}}
+					>
+						<Box
+							sx={{
+								display: 'flex',
+								flexDirection: 'column'
+							}}
+						>
 							<Card
 								component="div"
 								sx={{
+									display: 'flex',
+									flexDirection: 'column',
 									padding: '80px',
 									height: '100%',
 									borderRadius: '25px',
@@ -37,12 +50,16 @@ function Results() {
 										color: '#ffffff'
 									}}
 								/>
+								<Button variant="outlined">
+									<Link
+										to={{ pathname: '/payment' }}
+										style={{ textDecoration: 'none', color: 'white' }}
+									>
+										Payment
+									</Link>
+								</Button>
 							</Card>
 						</Box>
-
-						<Button>
-							<Link to={{ pathname: '/payment' }}>Payment</Link>
-						</Button>
 					</Box>
 
 					<Box sx={{ flex: '1' }}>
@@ -53,7 +70,7 @@ function Results() {
 								paddingTop: 5
 							}}
 							alt="car"
-							src={car}
+							src={explore}
 						/>
 						{/* <img src={car} alt="car" sx={{ maxWidth: '100%' }} /> */}
 					</Box>
