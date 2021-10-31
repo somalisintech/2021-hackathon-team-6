@@ -72,6 +72,7 @@ function Signup() {
 				</Box>
 
 				<Box>
+					{/* Currently not hooked up with firebase , here for demo only*/}
 					<TextField
 						margin="normal"
 						required
@@ -82,6 +83,7 @@ function Signup() {
 						autoComplete="name"
 						autoFocus
 					/>
+					{/* Currently not hooked up with firebase , here for demo only*/}
 					<TextField
 						margin="normal"
 						required

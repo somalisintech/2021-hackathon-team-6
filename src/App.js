@@ -5,7 +5,9 @@ import Box from '@mui/material/Box';
 
 export default function App() {
 	return (
+		/*Uncomment to see Carbon page*/
 		// <Carbon />
+		//Comment out to see Carbon page
 		<Box
 			sx={{
 				display: 'flex',
