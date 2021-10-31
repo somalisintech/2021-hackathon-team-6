@@ -9,7 +9,8 @@ function Homepage() {
 		<Box
 			component="img"
 			sx={{
-				maxWidth: 500
+				maxWidth: 650,
+				paddingTop: 5
 			}}
 			alt="Geed"
 			src={hero}
