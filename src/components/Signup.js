@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { signup, login, logout, useAuth } from '../firebase';
+
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -22,25 +24,25 @@ function Signup() {
 	async function handleSignup() {
 		setLoading(true);
 		await signup(emailRef.current.value, passwordRef.current.value);
-		try{
-		history.push('/carbon')
-	} catch(err){
-		console.error(err);
-	}
+		try {
+			history.push('/carbon');
+		} catch (err) {
+			console.error(err);
+		}
 		setLoading(false);
 	}
 
 	async function handleLogin() {
 		setLoading(true);
 		await login(emailRef.current.value, passwordRef.current.value);
-		history.push('/carbon')
+		history.push('/carbon');
 		setLoading(false);
 	}
 
 	async function handleLogout() {
 		setLoading(true);
 		await logout();
-		history.push('/homepage')
+		history.push('/homepage');
 		setLoading(false);
 	}
 
@@ -115,9 +117,11 @@ function Signup() {
 					<Button disabled={loading || currentUser} onClick={handleSignup}>
 						Sign Up
 					</Button>
+
 					<Button disabled={loading || currentUser} onClick={handleLogin}>
-						Log In
+						<Link to="/carbon">Log In</Link>
 					</Button>
+
 					<Button disabled={loading || !currentUser} onClick={handleLogout}>
 						Log Out
 					</Button>
